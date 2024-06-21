@@ -9,7 +9,7 @@ let ih = (a, b) => {
   }
 };
 ih(a, b);
-
+console.log("==========");
 // bodlogo 2 Өгөгдсөн array -аас өгөгдсөн тоо байгаа эсэхийг олох функц бич. Тухайн тоо байвал индексийг буцаана. Байхгүй бол -1 буцаана.
 function findNumberIndex(arr, number) {
   for (let i = 0; i < arr.length; i++) {
@@ -26,7 +26,7 @@ let array = [1, 3, 5, 7, 9];
 // Тэст хийх
 console.log(findNumberIndex(array, 5)); // 2 гэж хэвлэнэ (индекс нь 0-с эхлэнэ)
 console.log(findNumberIndex(array, 8)); // -1 гэж хэвлэнэ (8 тоо олдсонгүй)
-
+console.log("==========");
 // bodlogo 3 Өгөгдсөн тэмдэгт мөрөөс -аас өгөгдсөн тэмдэгт байгаа эсэхийг олох функц бич. Тухайн тэмдэгт байвал индексийг буцаана. Байхгүй бол -1 буцаана.
 function findCharacterIndex(str, char) {
   for (let i = 0; i < str.length; i++) {
@@ -43,7 +43,7 @@ let str = "Hello, World!";
 // Тэст хийх
 console.log(findCharacterIndex(str, "o")); // 4 гэж хэвлэнэ (индекс нь 0-с эхлэнэ)
 console.log(findCharacterIndex(str, "z")); // -1 гэж хэвлэнэ ('z' тэмдэгт олдсонгүй)
-
+console.log("==========");
 // bodlogo 4 Өгөгдсөн array - ийн дундажыг олох функц бич.
 function findAverage(arr) {
   let sum = 0;
@@ -64,8 +64,8 @@ let arr = [2, 4, 6, 8, 10];
 
 // Дундажыг олох
 let avg = findAverage(array);
-console.log("Дундаж:", avg); // Дундаж: 6 гэж хэвлэнэ
-
+console.log("Дундаж:", avg);
+console.log("==========");
 // bodlogo 5 Өгөгдсөн array - ийн нийлбэрийг олох функц бич.
 let niilber = [2, 3, 4, 5, 6];
 let niilber1 = 0;
@@ -107,9 +107,29 @@ function isPrime(number) {
 // Тэст хийх
 console.log(isPrime(17)); // true гэж хэвлэнэ (17 нь анхны тоо)
 console.log(isPrime(15)); // false гэж хэвлэнэ (15 нь анхны тоо биш)
-
+console.log("==========");
 // bodlogo 7 Palindrome too eseh jishee ni: input: 121 output: true, input: -121 output: false, input: 12  output: false
-
+function palindrome(x) {
+  let rev = 0;
+  let num = 0;
+  let orignalnum = x;
+  while (x > 0) {
+    num = x % 10;
+    rev = rev * 10 + num;
+    x = x - num;
+    x = x / 10;
+  }
+  console.log(rev, orignalnum);
+  if (orignalnum === rev) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(
+  "palindrome too :",
+  palindrome(Number(prompt("palindrome too oruul")))
+);
 // function isPalindrome(x) {
 // Хэрэв тоо отрицатель байвал эсвэл 0-с бага байвал false буцаана
 //   if (x < 0 || (x % 10 === 0 && x !== 0)) {
@@ -120,7 +140,7 @@ console.log(isPrime(15)); // false гэж хэвлэнэ (15 нь анхны т�
 // let original = x;
 
 // Тоо хоёр түр хувааж үлдсэн дэд бүтэн тоо байхад, түүнийг хооронд нь үржүүлэх
-
+console.log("==========");
 // bodlogo 8 Ugugdsun string urvuulna gargah jishee ni: input: hello output: olleh
 
 // function reverseString(str) {}
@@ -134,7 +154,7 @@ for (let i = string12.length - 1; i > -1; i--) {
 }
 
 console.log("reverse:", rev);
-
+console.log("==========");
 //  bodlogo 9
 let students = [
   {
